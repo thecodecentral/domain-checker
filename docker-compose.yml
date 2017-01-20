@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+    data:
+        image: alpine:3.4
+        volumes:
+            - .:/mnt/data
+
+    webpack:
+        build:
+            context: .
+        volumes_from:
+            - data
